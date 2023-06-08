@@ -49,7 +49,7 @@ public class ItemServiceImpl implements ItemService {
             throw new InsufficientQuantityException("Insufficient quantity");
         }
 
-        Item item = ItemTransformer.itemRequestDtoToItem(product, customer, itemRequestDto.getRequiredQuantity());
+        Item item = ItemTransformer.itemRequestDtoToItem(itemRequestDto.getRequiredQuantity());
         return item;
     }
 }
